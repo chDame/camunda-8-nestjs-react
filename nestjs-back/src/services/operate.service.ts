@@ -37,8 +37,7 @@ export class OperateService {
   }
   embeddedForm = async (processDefinitionId:string, formId:string):Promise<any> => {
     let { data } =  await this.api.get('/v1/process-definitions/'+processDefinitionId+'/xml');
- console.log(data);
- console.log(formId);
+
 	let document = new DOMParser().parseFromString(data);
 
     let nodeById = document.getElementById(formId);

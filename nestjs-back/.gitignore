@@ -1,10 +1,6 @@
 # compiled output
-node_modules
-nestjs-back/dist
-nestjs-back/node_modules
-react-front/dist
-react-front/node_modules
-react-front/build
+/dist
+/node_modules
 
 # Logs
 logs
@@ -23,15 +19,14 @@ lerna-debug.log*
 /.nyc_output
 
 # IDEs and editors
-front/.vs
-nestjs-back/.vs
-nestjs-back/.idea
-nestjs-back.project
-nestjs-back.classpath
-nestjs-back.c9/
-nestjs-back*.launch
-nestjs-back.settings/
-nestjs-back*.sublime-workspace
+/.vs
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
 # IDE - VSCode
 .vscode/*
