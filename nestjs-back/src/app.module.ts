@@ -11,10 +11,11 @@ import { OperateService } from './services/operate.service';
 import { FormService } from './services/form.service';
 import { MailService } from './services/mail.service';
 import { TasklistService } from './services/tasklist.service';
-
+import { ZeebeService } from './services/zeebe.service';
+import { MainWorkers} from './workers/main.worker';
 @Module({
   imports: [],
   controllers: [AppController, AuthenticationController, FormController, ProcessController, FormEditionController, MailEditionController, TaskController],
-  providers: [AppService, OperateService, FormService, MailService, TasklistService],
+  providers: [AppService, OperateService, FormService, MailService, TasklistService, ZeebeService, MainWorkers],
 })
 export class AppModule {}

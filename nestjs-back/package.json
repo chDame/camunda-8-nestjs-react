@@ -27,7 +27,8 @@
     "nestjs-zeebe": "^8.1.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
-    "xmldom": "^0.6.0"
+    "xmldom": "^0.6.0",
+    "zeebe-node": "^8.2.5"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",

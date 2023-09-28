@@ -13,7 +13,6 @@ export class OperateService {
     axios.post('https://login.cloud.camunda.io/oauth/token', 
 	  {'grant_type':'client_credentials', 'audience':'operate.camunda.io', 'client_id': this.settings.clientId, 'client_secret':this.settings.clientSecret})
 	.then((response) => {
-	  console.log(response);
 	  this.api.defaults.headers.common['Authorization'] = 'Bearer ' + response.data.access_token;
 	});
   }
