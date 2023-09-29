@@ -6,7 +6,7 @@ import { OAuth2Client, GoogleAuth } from 'google-auth-library';
 import { JSONClient } from 'google-auth-library/build/src/auth/googleauth';
 const MailComposer = require('nodemailer/lib/mail-composer');
 import {google} from 'googleapis';
-
+import * as Mustache from 'mustache';
 @Injectable()
 export class MailService {
   scopes = ['https://www.googleapis.com/auth/gmail.readonly','https://www.googleapis.com/auth/gmail.send']
@@ -103,5 +103,10 @@ export class MailService {
 		gmail.users.messages.send({ requestBody: { raw }, userId: 'me' });
 	  }
 	this.authorize().then(callback);
+  }
+  
+  buildBody(template:string, locale:string, variables:any):string {
+	let mail = this.findByName(template+'-'+locale);
+	return Mustache.render(mail.htmlTemplate, variables);
   }
 }

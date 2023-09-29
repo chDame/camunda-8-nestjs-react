@@ -18,7 +18,8 @@ export class MainWorkers {
       paymentService: 'Did my job',
     });
 	//, 'fr', job.variables
-    await this.mailService.send('christophe.dame@camunda.com', 'subject', 'template');
+	let htmlContent = this.mailService.buildBody('template', 'en', job.variables);
+    await this.mailService.send('christophe.dame@camunda.com', 'subject', htmlContent);
     job.complete(updatedVariables);
   }
 		
