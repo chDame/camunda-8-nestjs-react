@@ -88,33 +88,7 @@ function AdminNavbar() {
             <NavLink className={({ isActive }) =>
               isActive ? "text-light menu-item selected" : "text-light menu-item"
             } to="/admin/mails">{t("Emails")}</NavLink>
-            {false ? <>
-            <NavLink className={({ isActive }) =>
-              isActive ? "text-light menu-item selected" : "text-light menu-item"
-            } to="/admin/feel">{t("Feel Tester")}</NavLink>
-            <NavLink className={({ isActive }) =>
-              isActive ? "text-light menu-item selected" : "text-light menu-item"
-            } to="/admin/dmn">{t("DMN")}</NavLink></> : <></>}
-            <NavLink className={({ isActive }) =>
-              isActive ? "text-light menu-item selected" : "text-light menu-item"
-            } to="/admin/templates">{t("Templates")}</NavLink>
-            {false && orgEnabled && user!.profile === 'Admin' ?
-              <NavLink className={({ isActive }) =>
-                isActive ? "text-light menu-item selected" : "text-light menu-item"
-              } to="/admin/users">{t("Users")}</NavLink>
-              : <></>
-            }
-            {false && user!.profile === 'Admin' ?
-              <>
-                <NavLink className={({ isActive }) =>
-                  isActive ? "text-light menu-item selected" : "text-light menu-item"
-                } to="/admin/theme">{t("Theming")}</NavLink>
-                <NavLink className={({ isActive }) =>
-                  isActive ? "text-light menu-item selected" : "text-light menu-item"
-                } to="/admin/translations">{t("Internationalization")}</NavLink>
-			  </>
-              : <></>
-            }
+            
           </div>
           : <></>}
       </nav>

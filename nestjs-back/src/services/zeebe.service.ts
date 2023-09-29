@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Settings } from '../settings';
-import { ZBClient, ZBWorkerTaskHandler } from 'zeebe-node';
+import { ZBClient, ZBWorkerTaskHandler, ZBWorker } from 'zeebe-node';
 
 @Injectable()
 export class ZeebeService {
@@ -16,8 +16,8 @@ export class ZeebeService {
   });
   constructor() {}
   
-  async initWorker(taskType:string, handler:any) {
-	this.zbc.createWorker({
+  initWorker(taskType:string, handler:any) {
+	return this.zbc.createWorker({
 		taskType: taskType,
 		taskHandler: handler,
 		// the number of simultaneous tasks this worker can handle
