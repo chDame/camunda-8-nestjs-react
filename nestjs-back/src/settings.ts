@@ -1,6 +1,6 @@
 export class Settings {
-  clientId: string = "***REMOVED***";
-  clientSecret:string = "***REMOVED***";
-  clusterId:string = "***REMOVED***";
+  clientId: string = "XXX";
+  clientSecret:string = "XXX";
+  clusterId:string = "XXX";
   clusterRegion:string = "bru-2";
 }
